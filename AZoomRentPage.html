@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZoom</title>
+    <link rel ='stylesheet' href="HeaderLogIn.css">
+    <link rel ='stylesheet' href="Footer.css">
+    <link rel ='stylesheet' href="RentPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script type="text/javascript" src="Function.js"></script>
+<script type="text/javascript" src="ErrorHandle.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body style="margin: 0;">
+<div class="container">
+    <!-- Top Navigation Menu -->
+ <div class="topnav">
+    <a href="AZoomHomePageLogIn.html" class="active"><img src="./Images/A.jpeg"></a>
+    <div id="myLinks">
+        <a href="AZoomFleetLogIn.html">Fleet</a>
+        <a href="AZoomPricingLogIn.html">Pricing</a>
+        <a href="AZoomLocationLogIn.html">Locations</a>
+        <a href="AZoomRentPage.html">My Rental</a>
+        <a href="AZoomPayment.html">My Payment</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+    </a>
+</div>
+    <div class="header">
+        <a href="AZoomHomePageLogIn.html">
+            <div class="logo">
+                <img src="./Images/A.jpeg" alt="'logo" class="header__logo">    
+            </div>
+        </a>
+        <div class="header__selection">
+            <a class="header__selection__Fleet" href="AZoomFleetLogIn.html">Fleet</span></a>
+            <a class="header__selection__Pricing" href="AZoomPricingLogIn.html">Pricing</span></a>
+            <a class="header__selection__Location" href="AZoomLocationLogIn.html">Locations</span></a>   
+            <a class="header__selection__Location" href="AZoomRentPage.html">Rent</span></a>   
+            <a class="header__selection__Location" href="AZoomPayment.html">Payment</span></a>   
+        </div>
+        <div class="userLoggedIn">
+            <div class="logoImage">
+                <img src="./Images/image.jpg">
+            </div>
+            <a href="AZoomRentPage.html">
+                Pei Ming
+            </a>
+        </div>
+    </div>
+</div>
+
+    <div class="rentPageContainer">
+        <div class="RentHeader">
+            <h1>My Rental Page</h1>
+            <h3>View and make your reservations here</h3>
+        </div>
+
+        <div class="reserveContainer">
+            <div class="reserveHeader">
+                <h2>Current Reservations</h2>
+            </div>
+
+            <div class="reserveCars">
+                <h3>You do not have any active reservations.</h3>
+            </div>
+        </div>
+        <div class="instructionContainer">
+            <div class="instructionHeader">
+                <h2>Instructions for reservations</h2>
+            </div>
+
+            <div class="instructions">
+                <ul>
+                    <li>Pick out your favourite car from the selection list below</li>
+                    <li>Select the dates you wish to rent</li>
+                    <li>Key in your credit card details to reserve the car, no payment will be made at this point</li>
+                    <li>Pick up your car at our office</li>
+                    <li>Please bring along a physical copy of your driving license for verification</li>
+                    <li>Return your car at the designated carpark</li>
+                    <li>Make final payment after our staff has inspected the car</li>
+                </ul>
+                <div >
+                    <button class="locationButton">
+                        <a href="AZoomLocation.html" >See Locations</a>
+                    </button>
+                   
+                </div>
+            </div>
+        </div>
+
+
+
+    <div class="paymentHeader">
+    <div class="containerPayment">
+		<div class="left">
+			<h3>RESERVATIONS DETAILS</h3>
+			<form onsubmit="return confirm('Click Ok to confirm your rental else click cancel');" action="AZoomHomePageLogIn.html">
+                <div id="zip">
+                    <label>
+                        Select Your Car
+                        <select name="rentalCar" id="cars">
+                            <option value="selectCar" selected disabled>Select Car</option> 
+                            <option value="kona">Hyundai Kona</option> 
+                                   <option value="zs">MG ZS</option>
+                                    <option value="e6">BYD e6</option>
+                                    <option value="ioniq">Hyundai Ioniq</option>
+                                    <option value="ioniq5">Hyundai Ioniq 5</option>
+                                    <option value="eqs">Mercedes-AMG EQS</option>
+                                    <option value="m60">BMW IX M60</option>
+                                    <option value="model3">Tesla Model 3</option>
+                                    <option value="modely">Tesla Model Y</option>
+                         </select>
+                    </label>
+                </div>
+                
+            
+				Full name
+				<input type="text" name="" placeholder="Enter name" required>
+				Email
+				<input type="text" name="" placeholder="Enter email" required>
+
+				Address
+				<input type="text" name="" placeholder="Enter address" required>
+				
+				<div id="zip">
+					<label>
+						Start Date
+						<input type="date">
+					</label>
+						<label>
+						Start Time
+						<select>
+                            <option value="default" selected disabled>Select Time</option>
+                            <option value="0000">12AM</option>
+                            <option value="0100">1AM</option>
+                            <option value="0200">2AM</option>
+                            <option value="0300">3AM</option>
+                            <option value="0400">4AM</option>
+                            <option value="0500">5AM</option>
+                            <option value="0600">6AM</option>
+                            <option value="0700">7AM</option>
+                            <option value="0800">8AM</option>
+                            <option value="0900">9AM</option>
+                            <option value="1000">10AM</option>
+                            <option value="1100">11AM</option>
+                            <option value="1200">12PM</option>
+                            <option value="1300">1PM</option>
+                            <option value="1400">2PM</option>
+                            <option value="1500">3PM</option>
+                            <option value="1600">4PM</option>
+                            <option value="1700">5PM</option>
+                            <option value="1800">6PM</option>
+                            <option value="1900">7PM</option>
+                            <option value="2000">8PM</option>
+                            <option value="2100">9PM</option>
+                            <option value="2200">10PM</option>
+                            <option value="2300">11PM</option>
+                         </select>
+					</label>
+				</div>
+				<div id="zip">
+					<label>
+						End Date
+						<input type="date">
+					</label>
+						<label>
+						End Time
+						<select>
+                            <option value="default" selected disabled>Select Time</option>
+                            <option value="0000">12AM</option>
+                            <option value="0100">1AM</option>
+                            <option value="0200">2AM</option>
+                            <option value="0300">3AM</option>
+                            <option value="0400">4AM</option>
+                            <option value="0500">5AM</option>
+                            <option value="0600">6AM</option>
+                            <option value="0700">7AM</option>
+                            <option value="0800">8AM</option>
+                            <option value="0900">9AM</option>
+                            <option value="1000">10AM</option>
+                            <option value="1100">11AM</option>
+                            <option value="1200">12PM</option>
+                            <option value="1300">1PM</option>
+                            <option value="1400">2PM</option>
+                            <option value="1500">3PM</option>
+                            <option value="1600">4PM</option>
+                            <option value="1700">5PM</option>
+                            <option value="1800">6PM</option>
+                            <option value="1900">7PM</option>
+                            <option value="2000">8PM</option>
+                            <option value="2100">9PM</option>
+                            <option value="2200">10PM</option>
+                            <option value="2300">11PM</option>
+                         </select>
+					</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="right">
+			<h3>PAYMENT</h3>
+			<form onsubmit="return confirm('Click OK to confirm your reservation');" action="AZoomHomePageLogIn.html">
+				Accepted Card <br>
+				<img src="./Images/card1.png" width="100">
+				<br><br>
+
+				Credit card number
+			<input type="text" name="" placeholder="Enter card number" required>
+				
+				Exp month
+				<input type="text" name="" placeholder="Enter Month" required>
+				<div id="zip">
+					<label>
+						Exp year
+						<select>
+							<option>Choose Year..</option>
+							<option>2022</option>
+							<option>2023</option>
+							<option>2024</option>
+							<option>2025</option>
+						</select>
+					</label>
+						<label>
+						CVV
+						<input type="number" name="" placeholder="CVV" required>
+					</label>
+				</div>
+			<input type="submit" name="" value="Reserve Car">
+        </form>
+		</div>
+	</div>
+    </div>
+</body>
+    <section class="footer">
+        <div class = 'copyright'>
+            <p>	&#169 AZoom car rental service. All rights reserved</p>
+        </div>
+        <div class="icons">
+            <a><i class='bx bxl-meta'></i></a>
+            <a><i class='bx bxl-twitter' ></i></a>
+            <a><i class='bx bxl-instagram' ></i></a>
+            <a><i class='bx bxl-tiktok' ></i></a>
+        </div>
+    </section>
+</body>
+</html>

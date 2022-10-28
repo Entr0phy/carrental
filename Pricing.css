@@ -1,0 +1,186 @@
+body{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-header{
+    text-align: center;
+    margin: 2rem;
+}
+
+.pricing-header h2{
+    font-family: 'Kanit';
+    color: rgb(107, 19, 3);
+    font-size: 4rem;
+    text-shadow: 3px 3px rgb(162, 146, 189);
+}
+
+.pricing-header div{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(77, 74, 74);
+    font-size: 1.5rem;
+    
+}
+
+.price-container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.price-container .image-box{
+    width: 100%;
+    
+}
+
+.price-container .image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.timetable-header{
+    text-align: center;
+    font-family: 'Anton';
+    color: rgb(4, 87, 87);
+    font-size: 3rem;
+    text-shadow: 3px 3px rgb(162, 146, 189);
+}
+.timetable{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.table{
+    padding: 1rem;
+    border: 3px solid teal;
+    border-radius: 16px;
+    box-shadow: 1px 4px 41px rgba(0,0,0,0.1);
+}
+
+.table th{
+    font-family: 'Kanit';
+    font-size: x-large;
+    color: rgb(59, 58, 58);
+    width: 33%;
+    padding: 1rem;
+}
+
+.table td{
+    padding: 1rem;
+    font-size: large;
+    text-align: center;
+}
+
+.time{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.normal{
+    padding: 1rem;
+    background-color: rgb(197, 160, 199);
+    border-radius: 16px;
+    font-family: 'Kanit';
+    color: rgb(117, 50, 161);
+}
+
+.off-peak{
+    padding: 1rem;
+    background-color: rgb(238, 210, 54);
+    border-radius: 16px;
+    font-family: 'Kanit';
+    color: rgb(43,57,70);
+}
+
+.peak{
+    padding: 1rem;
+    background-color: grey;
+    border-radius: 16px;
+    font-family: 'Kanit';
+    color: rgb(43, 57,70);
+}
+
+.fleetcontainer{
+    padding: 2rem;
+}
+
+.headertop{
+    font-family:'Anton';
+    color: #828334;
+    font-size: 4rem;
+    text-shadow: 3px 3px rgb(45, 45, 46);
+}
+
+.headerbot{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: #5c5c5c;
+    font-size: 2rem;
+}
+.carContainer{
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    /*grid-template-columns: repeat(auto-fit, minmax(300px,auto));*/
+    grid-template-columns: repeat(3,1fr);
+}
+
+.carContainer .box{
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 41px rgba(0,0,0,0.1);
+}
+
+.carContainer .box .carImage{
+    width: 100%;
+    height: 250px;
+}
+
+.carContainer .box .carImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carContainer .box h3{
+    font-weight: 600;
+    font-family: 'Anton';
+    color: #f77b07;
+    font-size: x-large;
+}
+
+.carContainer .box p{
+    font-family: 'Kanit';
+    font-weight: 100;
+    color: #5c5c5c;
+
+}
+
+.seeallcars{
+    margin-top: 2rem;
+}
+
+.seeallcars a{
+    text-decoration: none;
+    background-color: #4b4948;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid teal;
+    font-family: 'Anton';
+    color: azure;
+}
+@media screen and (max-width: 600px) {
+    .price-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carContainer{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
